@@ -1,0 +1,44 @@
+extends ../layout/user-pages
+
+block header-pages 
+    if user 
+        include ../includes/header-general-user
+    else
+        include ../includes/header-general-no-user
+
+block content
+        section(class="py-5")
+            h2(class="text-center text-3xl font-bold  pt-10")=page
+
+            if estates.length
+                div(class="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-5")
+                    each estate in estates
+                        div(class="bg-white shadow rounded-md")
+                            img(class="object-cover h-72 w-full" src=estate.img_url alt=`Image of house ${estate.title}`)
+                            h3(class="text-2xl ml-5 font-bold my-5")=estate.title
+                            div(class="grid grid-cols-1 md:grid-cols-2 gap-5 px-3")
+                                div(class="flex items-center gap-2")
+                                    img(src="/img/wc-icon.png", alt="wc-icon" class="w-[25px] h-[25px]")
+                                    p(class="text-gray-500 font-bold text-xs") Bathrooms
+                                        span(class="text-gray-700 block text-xs")=estate.bathrooms
+                                div(class="flex items-center gap-2")
+                                    img(src="/img/bedroom-icon.png", alt="wc-icon" class="w-[25px] h-[25px]")
+                                    p(class="text-gray-500 font-bold text-xs") Rooms 
+                                        span(class="text-gray-700 block text-xs")=estate.rooms
+                                div(class="flex items-center gap-2")
+                                    img(src="/img/parking-icon.png", alt="wc-icon" class="w-[25px] h-[25px]")
+                                    p(class="text-gray-500 font-bold text-xs") Parking lots
+                                        span(class="text-gray-700 block text-xs")=estate.parking
+                                div(class="flex items-center gap-2")
+                                    img(src="/img/price-icon.png", alt="wc-icon" class="w-[25px] h-[25px]")
+                                    p(class="text-gray-500 font-bold text-xs") Price
+                                        span(class="text-gray-700 block text-xs")=estate.price
+                                a(href=`/category/${category}/estate/${estate.id}` class="bg-yellow-300 col-span-2 my-5 text-center text-sm tracking-wide font-bold block text-gray-800 p-2 rounded-md") Watch Estate
+
+            else    
+                p(class="mt-24 text-center text-gray-700 text-lg py-10") There're not results
+
+block scripts 
+    script(src="/js/menuCategoriesNotUser.js")
+    script(src="/js/menuCategoriesUser.js")
+    script(src="/js/menuMobileGeneral.js")

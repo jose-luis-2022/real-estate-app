@@ -1,0 +1,13 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Real Estates | #{page}
+        link(rel="stylesheet" href="/css/app.css")
+    body.min-h-screen.bg-gray-50
+        header(class="mt-5 px-10")
+            include ../includes/header-auth
+        main(class="container mx-auto mt-5 px-2")
+            block content
+

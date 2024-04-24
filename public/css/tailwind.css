@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.leaflet-container .show-estate-map{
+    background-color: rgb(228, 228, 77);
+    color: rgb(68, 63, 63);
+}
+
+.container-menu #menu {
+    display: none;
+}
+
+.container-menu #menu.visible {
+    display: block;
+}
+
+.container-menu-categories-user #menu-categories-user {
+    display: none;
+}
+
+.container-menu-categories-user #menu-categories-user.visible {
+    display: block;
+}
+
+.container-menu-not-user #menu-not-user {
+    display: none;
+}
+
+.container-menu-not-user #menu-not-user.visible {
+    display: block;
+}
+
+.container-menu-general #menu-general {
+    display: none;
+}
+
+.container-menu-general #menu-general.visible {
+    display: block;
+}
+
+
+
+

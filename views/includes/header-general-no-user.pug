@@ -1,0 +1,49 @@
+div(class="flex justify-between border-b-2 pb-5")
+    a(href="/" class="flex gap-2 items-center w-36")
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="rgba(97,159,166,1)"><path d="M21 19H23V21H1V19H3V4C3 3.44772 3.44772 3 4 3H14C14.5523 3 15 3.44772 15 4V19H17V9H20C20.5523 9 21 9.44772 21 10V19ZM7 11V13H11V11H7ZM7 7V9H11V7H7Z"></path></svg>
+        p(class="text-lg sm:text-xl font-semibold") Real Estates
+    nav(class="flex")
+        div(class="border-r-2 p-0 border-gray-400")
+            a(href="/auth/sign-in" class="flex gap-2 px-3 py-1 items-center hover:scale-[101%] hover:mr-[5px] hover:rounded-md hover:bg-gray-100 duration-700")
+                p(class="text-sm sm:text-md font-semibold text-gray-700") Sign in
+        div
+            a(href="/auth/sign-up" class="flex gap-2 px-3 py-1 items-center hover:scale-[101%] hover:ml-[5px] hover:rounded-md hover:bg-gray-100 duration-700")
+                p(class="text-sm sm:text-md font-semibold text-gray-700") Sign up
+div(class="bg-indigo-500 py-2 rounded-b-md shadow-md")
+    div(class="px-5 mx-auto flex justify-between")
+        nav(class="hidden md:flex md:gap-4")
+            a(href="/category/1" class="text-xs inline-block py-2 px-4 rounded-md hover:bg-indigo-700 hover:shadow font-bold uppercase text-white") Houses 
+            a(href="/category/2" class="text-xs inline-block py-2 px-4 rounded-md hover:bg-indigo-700 hover:shadow font-bold uppercase text-white") Apartments
+            a(href="/category/3" class="text-xs inline-block py-2 px-4 rounded-md hover:bg-indigo-700 hover:shadow font-bold uppercase text-white") Stores
+            a(href="/category/4" class="text-xs inline-block py-2 px-4 rounded-md hover:bg-indigo-700 hover:shadow font-bold uppercase text-white") Lands
+            a(href="/category/5" class="text-xs inline-block py-2 px-4 rounded-md hover:bg-indigo-700 hover:shadow font-bold uppercase text-white") Cabins             
+        
+        button(id="btn-menu-not-user" class="md:hidden") <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="rgba(255,255,255,1)"><path d="M11.9999 13.1714L16.9497 8.22168L18.3639 9.63589L11.9999 15.9999L5.63599 9.63589L7.0502 8.22168L11.9999 13.1714Z"></path></svg>
+        
+        form(class="flex gap-4 items-center" action="/search" method="POST")
+            input(type="hidden" name="_csrf" value=csrfToken)
+            label(for="term" class="text-xs uppercase font-bold text-white") Search: 
+            input(type="text" id="term" name="term" placeholder="Search estates" class="px-2 py-1 rounded-md text-sm shadow")
+            
+            input(type="submit" value="Sent" class="bg-indigo-800 rounded-md uppercase text-white font-bold px-5 py-[0.45rem] text-xs hover:bg-indigo-600 cursor-pointer")
+
+div(class="container-menu-not-user flex justify-start relative")
+    ul(class="w-1/4 leading-10 shadow rounded-b-md bg-[#FBFCFC] absolute" id="menu-not-user") 
+        li 
+            div(class="flex justify-center hover:border-b-2 hover:scale-105 hover:border-white duration-1000") 
+                a(href="/category/1") Houses  
+        li 
+            div(class="flex justify-center hover:border-b-2 hover:scale-105 hover:border-white duration-1000")
+                a(href="/category/2") Apartments 
+        li 
+            div(class="flex justify-center hover:border-b-2 hover:scale-105 hover:border-white duration-1000")
+                a(href="/category/3") Stores
+        li 
+            div(class="flex justify-center hover:border-b-2 hover:scale-105 hover:border-white duration-1000")
+                a(href="/category/4") Lands
+        li
+            div(class="flex justify-center hover:border-b-2 hover:scale-105 hover:border-white duration-1000")
+                a(href="/category/5") Cabins
+
+
+

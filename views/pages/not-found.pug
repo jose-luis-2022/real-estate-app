@@ -1,0 +1,16 @@
+extends ../layout/user-pages
+
+block header-pages 
+    if user 
+        include ../includes/header-general-user
+    else
+        include ../includes/header-general-no-user
+
+block content 
+    div(class="py-10")
+        h2(class="text-center text-3xl font-bold pt-10")=page
+
+block scripts 
+    script(src="/js/menuCategoriesNotUser.js")
+    script(src="/js/menuCategoriesUser.js")
+    script(src="/js/menuMobileGeneral.js")
