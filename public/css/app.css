@@ -501,23 +501,6 @@ video {
   --tw-contain-paint:  ;
   --tw-contain-style:  ;
 }
-
-.container-menu #menu {
-  display: none;
-}
-
-.container-menu-categories-user #menu-categories-user {
-  display: none;
-}
-
-.container-menu-not-user #menu-not-user {
-  display: none;
-}
-
-.container-menu-general #menu-general {
-  display: none;
-}
-
 .container {
   width: 100%;
 }
@@ -611,6 +594,14 @@ video {
 .my-8 {
   margin-top: 2rem;
   margin-bottom: 2rem;
+}
+.mx-2 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+.mx-3 {
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
 }
 .mb-10 {
   margin-bottom: 2.5rem;
@@ -764,6 +755,12 @@ video {
 }
 .w-full {
   width: 100%;
+}
+.w-4\/12 {
+  width: 33.333333%;
+}
+.w-6\/12 {
+  width: 50%;
 }
 .max-w-3xl {
   max-width: 48rem;
@@ -1104,6 +1101,10 @@ video {
   padding-top: 0.45rem;
   padding-bottom: 0.45rem;
 }
+.px-1 {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
 .pb-5 {
   padding-bottom: 1.25rem;
 }
@@ -1270,6 +1271,38 @@ video {
 .leaflet-container .show-estate-map{
     background-color: rgb(228, 228, 77);
     color: rgb(68, 63, 63);
+}
+
+.container-menu #menu {
+    display: none;
+}
+
+.container-menu #menu.visible {
+    display: block;
+}
+
+.container-menu-categories-user #menu-categories-user {
+    display: none;
+}
+
+.container-menu-categories-user #menu-categories-user.visible {
+    display: block;
+}
+
+.container-menu-not-user #menu-not-user {
+    display: none;
+}
+
+.container-menu-not-user #menu-not-user.visible {
+    display: block;
+}
+
+.container-menu-general #menu-general {
+    display: none;
+}
+
+.container-menu-general #menu-general.visible {
+    display: block;
 }
 
 .hover\:mx-\[5px\]:hover {
@@ -1570,22 +1603,6 @@ video {
   .xl\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
-}
-
-.container-menu #menu.visible {
-  display: block;
-}
-
-.container-menu-categories-user #menu-categories-user.visible {
-  display: block;
-}
-
-.container-menu-not-user #menu-not-user.visible {
-  display: block;
-}
-
-.container-menu-general #menu-general.visible {
-    display: block;
 }
 
 

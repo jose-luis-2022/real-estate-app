@@ -14,8 +14,8 @@ block content
 
         p(id="info_load_msg" class="hidden delay-1000 duration-1000 w-full max-w-xs mx-auto py-2 mt-10 mb-5 bg-green-400 text-gray-50 font-semibold text-sm text-center shadow rounded-md") Image uploaded successfully
 
-        div(class="bg-white text-center space-y-5 shadow my-12 py-5 rounded-md mx-auto max-w-xl md:px-10")
-            form(id="imgs" class="dropzone border-dashed border-2 w-full min:h-96 h-auto rounded-sm flex-col justify-center items-center" method="POST" action=`/page/profile/user/add-image/${userData.id}`)
+        div(class="bg-white text-center space-y-5 shadow my-12 py-5 rounded-md mx-auto w-10/12 sm:max-w-xl md:px-10")
+            form(id="imgs" class="dropzone border-dashed border-2 w-10/12 mx-auto sm:w-full min:h-96 h-auto rounded-sm flex-col justify-center items-center" method="POST" action=`/page/profile/user/add-image/${userData.id}`)
                 input(type="hidden" name="_csrf" value=csrfToken)
             input(id="publish" tupe="button" class="w-28 bg-yellow-300 hover:bg-yellow-400 font-semibold py-1 cursor-pointer rounded-md" type="submit" value="Save")
 block scripts
